@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مولّد QR</title>
+   <link rel="icon" type="image/png" href="icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🎨 مولّد QR</h1>
+        <p class="subtitle">أدخل النص أو الرابط لتوليد رمز QR</p>
+
+        <div class="input-section">
+            <label for="text-input">النص أو الرابط:</label>
+            <textarea 
+                id="text-input" 
+                placeholder="اكتب هنا... مثال: https://google.com"
+                rows="3"
+            ></textarea>
+        </div>
+
+        <div class="options-section">
+            <div class="option">
+                <label for="size-input">الحجم (بكسل):</label>
+                <input type="number" id="size-input" value="300" min="100" max="1000">
+            </div>
+
+            <div class="option">
+                <label for="color-dark">لون الرمز:</label>
+                <input type="color" id="color-dark" value="#000000">
+            </div>
+
+            <div class="option">
+                <label for="color-light">لون الخلفية:</label>
+                <input type="color" id="color-light" value="#ffffff">
+            </div>
+        </div>
+
+        <button id="generate-btn">✨ توليد QR</button>
+
+        <div class="result-section">
+            <div id="qrcode"></div>
+        </div>
+
+        <div class="actions-section" id="actions" style="display: none;">
+            <button id="download-btn">⬇️ تحميل الصورة</button>
+            <button id="copy-btn">📋 نسخ الصورة</button>
+        </div>
+    </div>
+
+    <!-- مكتبة توليد QR -->
+    <script src="qrcode.min.js"></script>
+    <!-- كود التطبيق -->
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+/* ===== إعدادات عامة ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+}
+
+/* ===== الحاوية الرئيسية ===== */
+.container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 600px;
+    padding: 35px 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    color: #4a3aff;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* ===== قسم الإدخال ===== */
+.input-section {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #444;
+    font-size: 14px;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 15px;
+    resize: vertical;
+    transition: border-color 0.3s;
+    font-family: inherit;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #4a3aff;
+}
+
+/* ===== قسم الخيارات ===== */
+.options-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+    text-align: right;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="number"] {
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #4a3aff;
+}
+
+input[type="color"] {
+    width: 100%;
+    height: 45px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #fff;
+    padding: 4px;
+}
+
+/* ===== زر التوليد ===== */
+#generate-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #4a3aff, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 20px;
+}
+
+#generate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(74, 58, 255, 0.4);
+}
+
+#generate-btn:active {
+    transform: translateY(0);
+}
+
+/* ===== قسم النتيجة ===== */
+.result-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#qrcode {
+    display: inline-block;
+    padding: 15px;
+    background: #fff;
+    border-radius: 12px;
+}
+
+#qrcode img,
+#qrcode canvas {
+    display: block;
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== أزرار الإجراءات ===== */
+.actions-section {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.actions-section button {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #4a3aff;
+    background: #fff;
+    color: #4a3aff;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.actions-section button:hover {
+    background: #4a3aff;
+    color: #fff;
+}
+
+/* ===== للشاشات الصغيرة ===== */
+@media (max-width: 500px) {
+    .container {
+        padding: 25px 20px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    .options-section {
+        grid-template-columns: 1fr;
+    }
+}
